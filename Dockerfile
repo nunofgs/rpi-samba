@@ -1,7 +1,7 @@
 FROM matthuisman/raspbian
 MAINTAINER Nuno Sousa <nunofgs@gmail.com>
 
-VOLUME /srv
+VOLUME /data
 EXPOSE 137 138 139 445
 
 ENV DEBIAN_FRONTEND noninteractive
