@@ -1,6 +1,6 @@
 # Samba Folder Sharing
 
-This image allows you to easily share a folder to the public using the SMB protocol, similar to what `python3 -m http.server` offers for HTTP.
+This image allows you to easily share a folder to the public using the SMB protocol.
 
 ## Usage
 
@@ -12,7 +12,7 @@ To share a folder, bind it as a volume to the internal path `/srv` and expose th
 		--publish 138:138 \
 		--publish 139:139 \
 		--volume /srv/samba:/srv \
-		jenserat/samba-publicshare
+		nunofgs/rpi-samba
 
 Use the optional `workgroup` environment variable to set the workgroup:
 

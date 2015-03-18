@@ -1,15 +1,14 @@
-FROM debian:jessie
-MAINTAINER Jens Erat <email@jenserat.de>
+FROM matthuisman/raspbian
+MAINTAINER Nuno Sousa <nunofgs@gmail.com>
 
 VOLUME /srv
 EXPOSE 137 138 139 445
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN \
-	apt-get update && \
-	apt-get install --no-install-recommends -y samba && \
-	apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get update && \
+    apt-get install --no-install-recommends -y samba && \
+    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY smb.conf /etc/samba/smb.conf
 
